@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bigkoo.pickerviewdemo.FundFilterView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88000000"
+    android:visibility="invisible"
+    android:id="@+id/ffv"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:paddingBottom="18dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="11dp"
+            android:paddingLeft="18dp"
+            android:paddingTop="15dp"
+            android:text="类型"
+            android:textColor="#a0a0a0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ebebeb" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="18dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="13dp"
+            android:text="日期"
+            android:textColor="#a0a0a0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="27dp"
+            android:paddingRight="27dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_begin_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_fund_filter_date"
+                    android:gravity="center"
+                    android:minHeight="27dp"
+                    android:text="2015.2.2"
+                    android:textColor="#4c4c4e"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="开始日期"
+                    android:textColor="#a0a0a0"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="27dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:text="至"
+                android:textColor="#a0a0a0"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_end_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_fund_filter_date"
+                    android:gravity="center"
+                    android:minHeight="27dp"
+                    android:text="2016.2.2"
+                    android:textColor="#4c4c4e"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="结束日期"
+                    android:textColor="#a0a0a0"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp">
+
+            <Button
+                android:id="@+id/bt_confirm"
+                style="@style/bt_orange"
+                android:text="确定" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.bigkoo.pickerviewdemo.FundFilterView>

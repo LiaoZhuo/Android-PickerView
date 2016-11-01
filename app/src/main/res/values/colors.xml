@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ll">#88000000</color>
+    <color name="bt_purple_n">#fafafc</color>
+    <color name="bt_purple_p">#3f2154</color>
+    <color name="bt_orange_n">#ee7700</color>
+    <color name="bt_orange_p">#b13c08</color>
+    <color name="bg_disable">#C3C3C3</color>
+</resources>

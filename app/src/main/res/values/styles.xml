@@ -4,5 +4,29 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
+    <style name="Transparent">
+        <item name="android:windowBackground">@color/ll</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+    <style name="bt_main">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">44dp</item>
+    </style>
+    <style name="bt_account" parent="bt_main">
+        <item name="android:background">@drawable/selector_bt_orange</item>
+    </style>
+    <style name="bt_orange" parent="bt_main">
+        <item name="android:background">@drawable/selector_bt_orange</item>
+    </style>
+
+    <style name="bt_purple" parent="bt_main">
+        <item name="android:background">@drawable/selector_bt_purple</item>
+    </style>
 
 </resources>

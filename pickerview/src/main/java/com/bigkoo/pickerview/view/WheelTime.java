@@ -1,9 +1,7 @@
 package com.bigkoo.pickerview.view;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.List;
+import android.content.Context;
+import android.view.View;
 
 import com.bigkoo.pickerview.R;
 import com.bigkoo.pickerview.TimePickerView.Type;
@@ -11,8 +9,10 @@ import com.bigkoo.pickerview.adapter.NumericWheelAdapter;
 import com.bigkoo.pickerview.lib.WheelView;
 import com.bigkoo.pickerview.listener.OnItemSelectedListener;
 
-import android.content.Context;
-import android.view.View;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.List;
 
 
 public class WheelTime {
@@ -29,7 +29,8 @@ public class WheelTime {
 	public static final int DEFULT_END_YEAR = 2100;
 	private int startYear = DEFULT_START_YEAR;
 	private int endYear = DEFULT_END_YEAR;
-
+	private int startMonth = 5;
+	private int startDay = 1;
 
 
 	public WheelTime(View view) {
@@ -60,13 +61,13 @@ public class WheelTime {
 		// 年
 		wv_year = (WheelView) view.findViewById(R.id.year);
 		wv_year.setAdapter(new NumericWheelAdapter(startYear, endYear));// 设置"年"的显示数据
-		wv_year.setLabel(context.getString(R.string.pickerview_year));// 添加文字
+//		wv_year.setLabel(context.getString(R.string.pickerview_year));// 添加文字
 		wv_year.setCurrentItem(year - startYear);// 初始化时显示的数据
 
 		// 月
 		wv_month = (WheelView) view.findViewById(R.id.month);
 		wv_month.setAdapter(new NumericWheelAdapter(1, 12));
-		wv_month.setLabel(context.getString(R.string.pickerview_month));
+//		wv_month.setLabel(context.getString(R.string.pickerview_month));
 		wv_month.setCurrentItem(month);
 
 		// 日
@@ -83,7 +84,7 @@ public class WheelTime {
 			else
 				wv_day.setAdapter(new NumericWheelAdapter(1, 28));
 		}
-		wv_day.setLabel(context.getString(R.string.pickerview_day));
+//		wv_day.setLabel(context.getString(R.string.pickerview_day));
 		wv_day.setCurrentItem(day - 1);
 
 

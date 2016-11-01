@@ -33,14 +33,14 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
 
         LayoutInflater.from(context).inflate(R.layout.pickerview_time, contentContainer);
         // -----确定和取消按钮
-        btnSubmit = findViewById(R.id.btnSubmit);
+        btnSubmit = findViewById(R.id.bt_ok_datepicker);
         btnSubmit.setTag(TAG_SUBMIT);
-        btnCancel = findViewById(R.id.btnCancel);
+        btnCancel = findViewById(R.id.bt_cancel_datepicker);
         btnCancel.setTag(TAG_CANCEL);
         btnSubmit.setOnClickListener(this);
         btnCancel.setOnClickListener(this);
         //顶部标题
-        tvTitle = (TextView) findViewById(R.id.tvTitle);
+        tvTitle = (TextView) findViewById(R.id.tv_title);
         // ----时间转轮
         final View timepickerview = findViewById(R.id.timepicker);
         wheelTime = new WheelTime(timepickerview, type);
@@ -124,7 +124,7 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
             if (timeSelectListener != null) {
                 try {
                     Date date = WheelTime.dateFormat.parse(wheelTime.getTime());
-                    timeSelectListener.onTimeSelect(date);
+                    timeSelectListener.onTimeSelect(date, this);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
@@ -133,16 +133,24 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
             return;
         }
     }
-
+    public Date getDate() {
+        Date date = null;
+        try {
+            date = WheelTime.dateFormat.parse(wheelTime.getTime());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return date;
+    }
     public interface OnTimeSelectListener {
-        void onTimeSelect(Date date);
+        void onTimeSelect(Date date, TimePickerView v);
     }
 
     public void setOnTimeSelectListener(OnTimeSelectListener timeSelectListener) {
         this.timeSelectListener = timeSelectListener;
     }
 
-    public void setTitle(String title){
+    public void setTitle(CharSequence title){
         tvTitle.setText(title);
     }
 }
